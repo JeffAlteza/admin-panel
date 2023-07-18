@@ -1,6 +1,6 @@
 
 import React from 'react'
-import UpdateEmail from '../components/dashboard-components/updateemail'
+import UpdateEmail from '../../components/dashboard-components/updateemail'
 
 const Dashboard = () => {
   return (

@@ -7,10 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
-      utilities: {
-        '.active-link': {
-          color: 'red',
-        },
+      colors: {
+        primary: '#4f46e5',
+        primary_darker: '#4338ca',
+        primary_active: '#3730a3',
       },
     },
   },

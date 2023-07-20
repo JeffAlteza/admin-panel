@@ -3,12 +3,18 @@ import React from "react";
 
 const Dashboard = () => {
   return (
-    <div className="flex items-center justify-center min-w-screen mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3overflow-hidden">
-        <StatsCard />
-        <StatsCard />
-        <StatsCard />
-        <StatsCard />
+    <div className="bg-white py-8 h-screen">
+      <div className="lg:mx-40 md:mx-20 sm:mx-4">
+        <div className="flex flex-col">
+          <p className="text font-bold text-4xl">Dashboard</p>
+          <p className="text text-md">Statistical Analysis</p>
+        </div>
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4 mt-10">
+          <StatsCard />
+          <StatsCard />
+          <StatsCard />
+          <StatsCard />
+        </div>
       </div>
     </div>
   );

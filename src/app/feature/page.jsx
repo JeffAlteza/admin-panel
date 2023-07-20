@@ -4,7 +4,9 @@ import Header from "../../components/feature-components/header/header";
 const Features = () => {
   return (
     <div>
-      <Header />
+      <div className="bg-white py-8 h-screen">
+        <Header />
+      </div>
     </div>
   );
 };

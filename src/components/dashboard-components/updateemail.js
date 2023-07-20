@@ -20,7 +20,7 @@ const UpdateEmail = () => {
             className="mb-2 block flex-1 rounded-lg border border-gray-500 py-1.5 pl-1 placeholder-slate-500 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
             placeholder="Enter email address"
           />
-          <button className="h-9 w-28 rounded-lg bg-indigo-500 font-bold text-white hover:bg-indigo-600">
+          <button className="h-9 w-28 rounded-lg bg-indigo-500 font-bold text-white hover:bg-primary">
             Update
           </button>
         </div>

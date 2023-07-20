@@ -47,7 +47,7 @@ export default function NavBar() {
     <Link
       key={index}
       href={href}
-      className="-mx-3 flex flex-row rounded-lg px-3 py-1 font-semibold leading-7 items-center text-sm text-gray-900 hover:text-indigo-600 active:text-indigo-800 hover:bg-gray-50"
+      className="-mx-3 flex flex-row rounded-lg px-3 py-1 font-semibold leading-7 items-center text-md text-gray-900 hover:text-primary active:text-primary_active hover:bg-gray-50"
     >
       <div className="h-9 w-9 bg-gray-100 mr-2 items-center justify-center flex rounded-md">
         {icon}
@@ -57,9 +57,9 @@ export default function NavBar() {
   );
 
   return (
-    <header className="sticky top-0 bg-transparent">
+    <header className="sticky top-0 bg-slate-100">
       <nav
-        className="mx-auto flex max-w-screen items-center justify-between p-4 lg:px-8 border-b border-gray-400"
+        className="mx-auto flex max-w-screen items-center justify-between p-4 lg:px-8 border-b border-gray-200"
         aria-label="Global"
       >
         <div className="flex mr-10">
@@ -85,21 +85,21 @@ export default function NavBar() {
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
           <Link
             href="/dashboard"
-            className="text-sm font-semibold leading-6 text-gray-900 hover:text-indigo-600 active:text-indigo-800"
+            className="text-md font-semibold leading-6 text-gray-900 hover:text-primary active:text-primary_active"
           >
             Dashboard
           </Link>
 
           <Link
             href="/feature"
-            className="text-sm font-semibold leading-6 text-gray-900  hover:text-indigo-600 active:text-indigo-800"
+            className="text-md font-semibold leading-6 text-gray-900  hover:text-primary active:text-primary_active"
           >
             Features
           </Link>
 
           <a
             href="#"
-            className="text-sm font-semibold leading-6 text-gray-900  hover:text-indigo-600 active:text-indigo-800"
+            className="text-md font-semibold leading-6 text-gray-900  hover:text-primary active:text-primary_active"
           >
             Company
           </a>
@@ -107,15 +107,15 @@ export default function NavBar() {
         <div className="hidden lg:flex lg:flex-1 lg:justify-end items-center">
           <a
             href="#"
-            className="-mx-3 block font-semibold text-sm justify-end"
+            className="-mx-3 block font-semibold text-md justify-end"
           >
             <p>Jeffrey Alteza</p>
-            <p className="text-indigo-700 text-xs text-end">Administrator</p>
+            <p className="text-primary_darker text-xs text-end">Administrator</p>
           </a>
           <div className="w-10 h-10 bg-slate-400 rounded-full ml-5 flex justify-center items-center text-white">
             <UserIcon className="h-7 w-7"/>
           </div>
-          {/* <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+          {/* <a href="#" className="text-md font-semibold leading-6 text-gray-900">
             Log in <span aria-hidden="true">&rarr;</span>
           </a> */}
         </div>
@@ -155,7 +155,7 @@ export default function NavBar() {
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-md font-semibold leading-7 text-gray-900"
                 >
                   <p>Jeffrey Alteza</p>
-                  <p className="text-indigo-700 text-sm">Administrator</p>
+                  <p className="text-primary_darker text-md">Administrator</p>
                 </a>
               </div>
               <div className="space-y-2 py-6">

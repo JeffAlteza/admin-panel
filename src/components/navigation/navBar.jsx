@@ -1,30 +1,22 @@
 "use client";
-
-import { Fragment, useState } from "react";
-import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
+import React from "react";
+import { useState } from "react";
+import { Dialog, Popover,} from "@headlessui/react";
 import {
-  ArrowPathIcon,
   ArrowRightOnRectangleIcon,
   Bars3Icon,
-  ChartPieIcon,
-  CursorArrowRaysIcon,
-  FingerPrintIcon,
   HomeIcon,
   SquaresPlusIcon,
-  UserIcon,
+  UserCircleIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
-import {
-  ChevronDownIcon,
-  PhoneIcon,
-  PlayCircleIcon,
-} from "@heroicons/react/20/solid";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import Dropdown from "../dropdown/Dropdown";
+import { usePathname } from 'next/navigation';
 
 const links = [
   {
-    href: "/dashboard",
+    href: "/",
     icon: <HomeIcon className="h-6 w-6" />,
     title: "Dashboard",
   },
@@ -41,6 +33,7 @@ const links = [
 ];
 
 export default function NavBar() {
+  const currentRoute = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const CustomLink = (href, icon, title, index) => (
@@ -84,40 +77,40 @@ export default function NavBar() {
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
           <Link
-            href="/dashboard"
-            className="text-md font-semibold leading-6 text-gray-900 hover:text-primary active:text-primary_active"
+            href="/"
+            className={`text-md font-semibold leading-6 ${
+              currentRoute === "/" ? "text-primary underline" : "text-gray-900"
+            } hover:text-primary active:text-primary_active`}
           >
             Dashboard
           </Link>
 
           <Link
             href="/feature"
-            className="text-md font-semibold leading-6 text-gray-900  hover:text-primary active:text-primary_active"
+            className={`text-md font-semibold leading-6 ${
+              currentRoute === "/feature" ? "text-primary underline" : "text-gray-900"
+            } hover:text-primary active:text-primary_active`}
           >
             Features
           </Link>
 
           <a
             href="#"
-            className="text-md font-semibold leading-6 text-gray-900  hover:text-primary active:text-primary_active"
+            className={`text-md font-semibold leading-6 ${
+              currentRoute === "/company" ? "text-primary underline" : "text-gray-900"
+            } hover:text-primary active:text-primary_active`}
           >
             Company
           </a>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end items-center">
-          <a
-            href="#"
-            className="-mx-3 block font-semibold text-md justify-end"
-          >
+          <a href="#" className="-mx-3 block font-semibold text-md justify-end">
             <p>Jeffrey Alteza</p>
-            <p className="text-primary_darker text-xs text-end">Administrator</p>
+            <p className="text-primary_darker text-xs text-end">
+              Administrator
+            </p>
           </a>
-          <div className="w-10 h-10 bg-slate-400 rounded-full ml-5 flex justify-center items-center text-white">
-            <UserIcon className="h-7 w-7"/>
-          </div>
-          {/* <a href="#" className="text-md font-semibold leading-6 text-gray-900">
-            Log in <span aria-hidden="true">&rarr;</span>
-          </a> */}
+            <Dropdown />
         </div>
       </nav>
       <Dialog
@@ -163,12 +156,22 @@ export default function NavBar() {
                   CustomLink(link.href, link.icon, link.title, index)
                 )}
               </div>
-              <div className="py-6">
+              <div className="space-y-2 py-6">
+                <div>
+                {CustomLink(
+                  "/account/profile",
+                  <UserCircleIcon className="h-6 w-6" />,
+                  "Account"
+                )}
+                </div>
+                <div>
                 {CustomLink(
                   "/logout",
                   <ArrowRightOnRectangleIcon className="h-6 w-6" />,
                   "Logout"
                 )}
+                </div>
+
               </div>
             </div>
           </div>

@@ -21,12 +21,12 @@ const links = [
     title: "Dashboard",
   },
   {
-    href: "/header",
+    href: "/header/view-header",
     icon: <SquaresPlusIcon className="h-6 w-6" />,
     title: "Header",
   },
   {
-    href: "/header",
+    href: "/header/view-header",
     icon: <SquaresPlusIcon className="h-6 w-6" />,
     title: "Event",
   },
@@ -86,9 +86,9 @@ export default function NavBar() {
           </Link>
 
           <Link
-            href="/header"
+            href="/header/view-header"
             className={`text-md font-semibold leading-6 ${
-              currentRoute === "/header" ? "text-primary underline" : "text-gray-900"
+              currentRoute === "/header/view-header" ? "text-primary underline" : "text-gray-900"
             } hover:text-primary active:text-primary_active`}
           >
             Header

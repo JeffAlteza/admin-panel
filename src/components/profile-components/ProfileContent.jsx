@@ -6,7 +6,7 @@ const ProfileContent = () => {
       <h2 className="text-2xl font-bold mb-4">Profile</h2>
       <form>
         <div className="mb-4">
-          <label htmlFor="fullName" className="block text-gray-700 font-medium">
+          <label className="block text-gray-700 font-medium">
             Full Name
           </label>
           <input
@@ -17,7 +17,7 @@ const ProfileContent = () => {
           />
         </div>
         <div className="mb-4">
-          <label htmlFor="email" className="block text-gray-700 font-medium">
+          <label className="block text-gray-700 font-medium">
             Email
           </label>
           <input
@@ -28,7 +28,7 @@ const ProfileContent = () => {
           />
         </div>
         <div className="mb-4">
-          <label htmlFor="address" className="block text-gray-700 font-medium">
+          <label className="block text-gray-700 font-medium">
             Address
           </label>
           <textarea

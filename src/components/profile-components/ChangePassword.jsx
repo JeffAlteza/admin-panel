@@ -36,7 +36,6 @@ const ChangePassword = () => {
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <label
-            htmlFor="currentPassword"
             className="block text-gray-700 font-medium"
           >
             Current Password
@@ -51,7 +50,7 @@ const ChangePassword = () => {
           />
         </div>
         <div className="mb-4">
-          <label htmlFor="newPassword" className="block text-gray-700 font-medium">
+          <label className="block text-gray-700 font-medium">
             New Password
           </label>
           <input
@@ -64,7 +63,7 @@ const ChangePassword = () => {
           />
         </div>
         <div className="mb-4">
-          <label htmlFor="confirmPassword" className="block text-gray-700 font-medium">
+          <label className="block text-gray-700 font-medium">
             Confirm New Password
           </label>
           <input

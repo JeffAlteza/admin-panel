@@ -6,9 +6,7 @@ const ViewHeader = () => {
   return (
     <form className="border border-b p-4 rounded-md shadow-sm">
       <div className="mb-4">
-        <label className="block text-gray-700 font-medium">
-          Banner Image
-        </label>
+        <label className="block text-gray-700 font-medium">Banner Image</label>
 
         <div class="flex items-center justify-center">
           <label
@@ -42,12 +40,11 @@ const ViewHeader = () => {
         />
       </div>
       <div className="flex justify-end">
-        <button
-          type="submit"
-          className="bg-primary hover:bg-primary_darker text-white font-semibold py-2 px-4 rounded-md"
-        >
-          <Link href="/header/edit-header">Edit</Link>
-        </button>
+        <Link href="/header/edit-header">
+          <button className="bg-primary hover:bg-primary_darker text-white font-semibold py-2 px-4 rounded-md">
+            Edit
+          </button>
+        </Link>
       </div>
     </form>
   );

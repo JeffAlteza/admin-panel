@@ -1,7 +1,18 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import EditHeader from "./EditHeader";
+import ViewHeader from "./ViewHeader";
 
 const HeaderComponent = ({ selectedRoute }) => {
+   useEffect(()=>{
+    const getData = async ()=>{
+      const query = await fetch('https://dummyjson.com/products');
+      const response = await query.json();
+      console.log('date:', response)
+    }
+    getData();
+  },[])
+
   return (
     <div className="lg:mx-40 md:mx-20 sm:mx-4 bg-white py-8 h-screen">
       <div className="flex flex-col">
@@ -17,7 +28,7 @@ const HeaderComponent = ({ selectedRoute }) => {
           </div>
         ) : selectedRoute === "view-header" ? (
           <div className="lg:block md:block sm:block">
-            <EditHeader />
+            <ViewHeader />
           </div>
         ) : null}
       </div>

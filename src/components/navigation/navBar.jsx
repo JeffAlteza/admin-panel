@@ -5,6 +5,7 @@ import { Dialog, Popover,} from "@headlessui/react";
 import {
   ArrowRightOnRectangleIcon,
   Bars3Icon,
+  ComputerDesktopIcon,
   HomeIcon,
   SquaresPlusIcon,
   UserCircleIcon,
@@ -26,9 +27,9 @@ const links = [
     title: "Header",
   },
   {
-    href: "/header/view-header",
-    icon: <SquaresPlusIcon className="h-6 w-6" />,
-    title: "Event",
+    href: "/project",
+    icon: <ComputerDesktopIcon className="h-6 w-6" />,
+    title: "Project",
   },
 ];
 
@@ -94,14 +95,14 @@ export default function NavBar() {
             Header
           </Link>
 
-          <a
-            href="#"
+          <Link
+            href="/project"
             className={`text-md font-semibold leading-6 ${
-              currentRoute === "/company" ? "text-primary underline" : "text-gray-900"
+              currentRoute === "/project" ? "text-primary underline" : "text-gray-900"
             } hover:text-primary active:text-primary_active`}
           >
-            Company
-          </a>
+            Project
+          </Link>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end items-center">
           <a href="#" className="-mx-3 block font-semibold text-md justify-end">

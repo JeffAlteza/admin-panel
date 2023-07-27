@@ -1,13 +1,8 @@
-import {
-  MagnifyingGlassCircleIcon,
-  MagnifyingGlassIcon,
-  PencilIcon,
-  PencilSquareIcon,
-} from "@heroicons/react/24/outline";
+
 import React from "react";
 
 const DataTable = ({ tableHeader, tableData }) => {
-  console.log(tableData);
+  
   const TableHeader = (title, index) => (
     <th
       key={index}
@@ -19,36 +14,34 @@ const DataTable = ({ tableHeader, tableData }) => {
   );
 
   const TableData = (data, index) => (
-    <tr>
+    <tr className="hover:bg-slate-100">
       <td className="whitespace-nowrap px-4 py-4 text-sm font-medium">
         <div>
           <h2 className="font-medium text-gray-800">{data.title}</h2>
-          {/* <p className="text-sm font-normal text-gray-600 ">catalogapp.io</p> */}
         </div>
       </td>
       <td className="whitespace-nowrap px-12 py-4 text-sm font-medium">
-        <div className="inline gap-x-2 rounded-full bg-emerald-100/60 px-3 py-1 text-sm font-normal text-emerald-500">
+        <div className="inline gap-x-2 rounded-full bg-indigo-400 px-3 py-1 text-sm font-normal text-white">
           {data.brand}
         </div>
       </td>
-      <td className="whitespace-nowrap px-4 py-4 text-sm">
-        <div>
+      <td className="whitespace-nowrap px-4 py-4 max-w-xs">
+        <div className="truncate">
           <h4 className="text-gray-700">{data.description}</h4>
-          {/* <p className="text-gray-500 ">Brings all your news into one place</p> */}
         </div>
       </td>
-
-      <td className="whitespace-nowrap px-4 py-4 text-sm">
+  
+      <td className="whitespace-nowrap px-4 py-4 text-sm flex justify-center">
         <button className="flex rounded-lg px-4 py-2 gap-2 font-semibold text-white transition-colors duration-200 bg-primary hover:bg-primary_darker">
           Update
         </button>
       </td>
     </tr>
-  );
+  );  
 
   return (
     <div>
-      <section className="container mx-auto px-4">
+      <section className="container mx-auto px-4 pb-6">
         {/* <div className="mt-6 md:flex md:items-center md:justify-between">
           <div className="relative mt-4 flex items-center md:mt-0">
             <MagnifyingGlassIcon className="text-white bg-white"/>
@@ -63,9 +56,9 @@ const DataTable = ({ tableHeader, tableData }) => {
 
         <div className="mt-6 flex flex-col">
           <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-            <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
+            <div className="inline-block min-w-full py-2 align-middle overflow-x-hidden">
               <div className="overflow-hidden border border-gray-400 rounded-lg">
-                <table className="min-w-full divide-y divide-gray-400">
+                <table className="w-full divide-y divide-gray-400">
                   <thead className="bg-slate-100">
                     <tr>
                       {tableHeader.map((tableHeaders, index) =>

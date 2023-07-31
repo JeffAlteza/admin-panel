@@ -3,9 +3,9 @@ import Upload from "../upload/upload";
 
 const EditHeader = () => {
   return (
-    <form className="border border-b p-4 rounded-md shadow-sm">
+    <form className="border border-gray-400 border-b p-4 rounded-md shadow-sm">
       <div className="text text-xl font-semibold">Edit Header</div>
-      <hr className="my-4" />
+      <hr className="my-4 border-gray-300" />
       <div className="mb-4">
       <label className="block text-gray-700 font-medium"> Banner Image </label>
         <Upload />
@@ -15,7 +15,7 @@ const EditHeader = () => {
         <input
           type="text"
           id="title"
-          className="mt-1 p-2 border rounded-md w-full"
+          className="mt-1 p-2 border border-gray-400 rounded-md w-full"
           placeholder="Enter Title"
         />
       </div>
@@ -24,7 +24,7 @@ const EditHeader = () => {
         <textarea
           type="description"
           id="description"
-          className="mt-1 p-2 border rounded-md w-full"
+          className="mt-1 p-2 border border-gray-400 rounded-md w-full"
           placeholder="Enter description"
         />
       </div>

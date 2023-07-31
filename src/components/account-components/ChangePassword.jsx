@@ -28,7 +28,7 @@ const ChangePassword = () => {
   };
 
   return (
-    <div className="bg-white p-8 border rounded-md shadow-md">
+    <div className="bg-white p-8 border border-gray-400 rounded-md shadow-md">
       <h2 className="text-2xl font-bold mb-4">Change Password</h2>
       {errorMessage && (
         <p className="text-red-500 text-sm mb-4">{errorMessage}</p>
@@ -45,7 +45,7 @@ const ChangePassword = () => {
             id="currentPassword"
             value={currentPassword}
             onChange={(e) => setCurrentPassword(e.target.value)}
-            className="mt-1 p-2 border rounded-md w-full"
+            className="mt-1 p-2 border border-gray-400 rounded-md w-full"
             placeholder="Enter your current password"
           />
         </div>
@@ -58,7 +58,7 @@ const ChangePassword = () => {
             id="newPassword"
             value={newPassword}
             onChange={(e) => setNewPassword(e.target.value)}
-            className="mt-1 p-2 border rounded-md w-full"
+            className="mt-1 p-2 border border-gray-400 rounded-md w-full"
             placeholder="Enter your new password"
           />
         </div>
@@ -71,7 +71,7 @@ const ChangePassword = () => {
             id="confirmPassword"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
-            className="mt-1 p-2 border rounded-md w-full"
+            className="mt-1 p-2 border border-gray-400 rounded-md w-full"
             placeholder="Confirm your new password"
           />
         </div>

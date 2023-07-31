@@ -2,7 +2,7 @@ import React from "react";
 
 const ProfileContent = () => {
   return (
-    <div className="bg-white p-8 rounded-md text-black border shadow-md">
+    <div className="bg-white p-8 border-gray-400 rounded-md text-black border shadow-md">
       <h2 className="text-2xl font-bold mb-4">Profile</h2>
       <form>
         <div className="mb-4">
@@ -12,7 +12,7 @@ const ProfileContent = () => {
           <input
             type="text"
             id="fullName"
-            className="mt-1 p-2 border rounded-md w-full"
+            className="mt-1 p-2 border border-gray-400 rounded-md w-full"
             placeholder="Enter your full name"
           />
         </div>
@@ -23,7 +23,7 @@ const ProfileContent = () => {
           <input
             type="email"
             id="email"
-            className="mt-1 p-2 border rounded-md w-full"
+            className="mt-1 p-2 border border-gray-400 rounded-md w-full"
             placeholder="Enter your email"
           />
         </div>
@@ -33,7 +33,7 @@ const ProfileContent = () => {
           </label>
           <textarea
             id="address"
-            className="mt-1 p-2 border rounded-md w-full"
+            className="mt-1 p-2 border border-gray-400 rounded-md w-full"
             rows="4"
             placeholder="Enter your address"
           />

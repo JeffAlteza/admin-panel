@@ -5,6 +5,7 @@ import { Dialog, Popover,} from "@headlessui/react";
 import {
   ArrowRightOnRectangleIcon,
   Bars3Icon,
+  ChatBubbleLeftRightIcon,
   ComputerDesktopIcon,
   HomeIcon,
   SquaresPlusIcon,
@@ -31,6 +32,11 @@ const links = [
     icon: <ComputerDesktopIcon className="h-6 w-6" />,
     title: "Project",
   },
+  {
+    href: "/contact",
+    icon: <ChatBubbleLeftRightIcon className="h-6 w-6" />,
+    title: "Contacts",
+  },
 ];
 
 export default function NavBar() {
@@ -41,7 +47,7 @@ export default function NavBar() {
     <Link
       key={index}
       href={href}
-      className="-mx-3 flex flex-row rounded-lg px-3 py-1 font-semibold leading-7 items-center text-md text-gray-900 hover:text-primary active:text-primary_active hover:bg-gray-50"
+      className="-mx-3 flex flex-row rounded-lg px-3 py-1 font-semibold leading-7 items-center text-md text-gray-900 hover:text-primary active:text-primary_active hover:bg-slate-200"
     >
       <div className="h-9 w-9 bg-gray-100 mr-2 items-center justify-center flex rounded-md">
         {icon}
@@ -102,6 +108,15 @@ export default function NavBar() {
             } hover:text-primary active:text-primary_active`}
           >
             Project
+          </Link>
+
+          <Link
+            href="/contact"
+            className={`text-md font-semibold leading-6 ${
+              currentRoute === "/contact" ? "text-primary underline" : "text-gray-900"
+            } hover:text-primary active:text-primary_active`}
+          >
+            Contact
           </Link>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end items-center">

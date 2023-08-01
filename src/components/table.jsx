@@ -1,8 +1,10 @@
-
+import {
+  ArrowLeftIcon,
+  ArrowRightIcon,
+} from "@heroicons/react/24/outline";
 import React from "react";
 
 const DataTable = ({ tableHeader, tableData }) => {
-  
   const TableHeader = (title, index) => (
     <th
       key={index}
@@ -59,20 +61,7 @@ const DataTable = ({ tableHeader, tableData }) => {
               href="#"
               className="flex w-1/2 items-center justify-center gap-x-2 duration-200 bg-white border-primary border hover:bg-primary_darker hover:text-white text-primary font-semibold py-2 px-4 rounded-md sm:w-auto"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                className="h-5 w-5 rtl:-scale-x-100"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18"
-                />
-              </svg>
+              <ArrowLeftIcon className="w-4 h-4" />
 
               <span> Previous </span>
             </a>
@@ -83,20 +72,7 @@ const DataTable = ({ tableHeader, tableData }) => {
             >
               <span> Next </span>
 
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                className="h-5 w-5 rtl:-scale-x-100"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-                />
-              </svg>
+              <ArrowRightIcon className="w-4 h-4" />
             </a>
           </div>
         </div>

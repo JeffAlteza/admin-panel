@@ -1,5 +1,5 @@
 import React from "react";
-import Upload from "../upload/upload";
+import Upload from "../upload";
 
 const EditHeader = () => {
   return (

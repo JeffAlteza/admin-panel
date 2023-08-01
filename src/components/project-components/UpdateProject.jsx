@@ -1,7 +1,7 @@
 "use"
 import React from 'react'
-import MultiSelect from '../multiselect/MultiSelect'
-import Upload from '../upload/upload'
+import MultiSelect from '../MultiSelect'
+import Upload from '../upload'
 
 const options = ['Option 1', 'Option 2', 'Option 3', 'Option 4'];
 

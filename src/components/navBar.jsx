@@ -12,7 +12,7 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import Dropdown from "../dropdown/Dropdown";
+import Dropdown from "./Dropdown";
 import { usePathname } from 'next/navigation';
 
 const links = [

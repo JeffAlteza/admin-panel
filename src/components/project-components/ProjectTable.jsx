@@ -2,7 +2,7 @@
 
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import DataTable from '../table/table';
+import DataTable from '../table';
 
 const ProjectTable = () => {
     const [product, setProduct] = useState([]);

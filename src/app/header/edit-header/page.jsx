@@ -1,4 +1,4 @@
-import HeaderComponent from "@/components/header-components/header";
+import HeaderComponent from "@/components/header-components/Header";
 import React from "react";
 
 const page = () => {

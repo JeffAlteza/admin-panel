@@ -12,7 +12,7 @@ const ViewHeader = () => {
 
         <div className="flex items-center justify-center">
           <label
-            for="dropzone-file"
+            htmlFor="dropzone-file"
             className="flex flex-col items-center justify-center w-full h-64 border border-gray-400 border-b rounded-lg cursor-pointer bg-gray-100 "
           >
             <div className="flex flex-col items-center justify-center pt-5 pb-6">

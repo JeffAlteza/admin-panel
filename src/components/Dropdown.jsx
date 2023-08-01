@@ -6,7 +6,7 @@ const Dropdown = () => {
     <div>
       <div className="relative w-10 h-10 bg-slate-400 rounded-full ml-5 flex justify-center items-center text-white">
         <input type="checkbox" id="sortbox" className="absolute hidden" />
-        <label for="sortbox" className="flex cursor-pointer items-center space-x-1">
+        <label htmlFor="sortbox" className="flex cursor-pointer items-center space-x-1">
           <UserIcon className=" cursor-pointer h-7 w-7" />
         </label>
 

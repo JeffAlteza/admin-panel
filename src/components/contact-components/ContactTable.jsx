@@ -2,7 +2,7 @@
 import { UserIcon } from "@heroicons/react/24/outline";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import DataTable from "../table";
+import DataTable from "../DataTable";
 
 const ContactTable = () => {
   const [contact, setContact] = useState([]);

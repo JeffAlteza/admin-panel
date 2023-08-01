@@ -1,5 +1,6 @@
 "use client"
 import { ArrowUpTrayIcon, PhotoIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
 import React, { useState } from "react";
 
 const Upload = () => {
@@ -20,7 +21,7 @@ const Upload = () => {
       >
         {selectedImage ? (
           <div className="w-full h-full p-3">
-            <img
+            <Image
               src={selectedImage}
               alt="Uploaded"
               className="w-full h-full object-cover rounded-md"

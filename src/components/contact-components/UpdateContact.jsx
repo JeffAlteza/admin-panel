@@ -4,14 +4,14 @@ import Upload from '../upload'
 const UpdateContact = () => {
     return (
         <form className="border border-gray-400 border-b p-4 rounded-md shadow-sm">
-          <div className="text text-xl font-semibold">Update Project</div>
+          <div className="text text-xl font-semibold">Update Social</div>
           <hr className="my-4 border-gray-300" />
           <div className="mb-4">
-          <label className="block text-gray-700 font-medium"> Banner Image </label>
+          <label className="block text-gray-700 font-medium"> Icon </label>
             <Upload />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700 font-medium"> Title </label>
+            <label className="block text-gray-700 font-medium"> Name </label>
             <input
               type="text"
               id="title"
@@ -20,12 +20,12 @@ const UpdateContact = () => {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700 font-medium"> Description </label>
-            <textarea
-              type="description"
-              id="description"
+            <label className="block text-gray-700 font-medium"> Link </label>
+            <input
+              type="text"
+              id="link"
               className="mt-1 p-2 border border-gray-400 rounded-md w-full"
-              placeholder="Enter description"
+              placeholder="Enter Url"
             />
           </div>
           <div className="flex justify-end">

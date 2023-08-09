@@ -18,7 +18,7 @@ const ProjectComponent = ({ selectedRoute }) => {
           </div>
         ) : selectedRoute === "update-project" ? (
           <div className="lg:block md:block sm:block">
-            <UpdateProject />
+            <UpdateProject id={1}/>
           </div>
         ) : null}
       </div>

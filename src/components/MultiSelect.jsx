@@ -1,8 +1,9 @@
 "use client"
 import React, { useState, useEffect, useRef } from 'react';
 
-const MultiSelect = ({ options }) => {
-  const [selectedOptions, setSelectedOptions] = useState([]);
+const MultiSelect = ({ options, selected }) => {
+  // console.log(selected);
+  const [selectedOptions, setSelectedOptions] = useState([selected]);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
 
